@@ -9,6 +9,6 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class PaymentDetails(var transactionId:Long = 0,val amount:String,
                           val time:String,var status:Boolean = false,
-                          val productName:String,val productId:String):Parcelable{
+                          val productName:String,val productId:Int):Parcelable{
      operator fun invoke(f:PaymentDetails.() -> Unit) = f()
 }

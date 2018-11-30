@@ -22,7 +22,7 @@ class PaymentActivity : AppCompatActivity() {
         }
     }
 
-    fun initView(details: PaymentDetails){
+    private fun initView(details: PaymentDetails){
         textTransactionIdValue.text = details.transactionId.toString()
         textProductNameValue.text = details.productName
         textAmount.text=details.amount
