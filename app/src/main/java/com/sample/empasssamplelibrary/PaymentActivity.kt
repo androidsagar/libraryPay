@@ -11,12 +11,12 @@ class PaymentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_payment)
         val details = getParcelable<PaymentDetails>(Constants.DETAILS)
+        details{
+            transactionId = System.currentTimeMillis()
+            status = true
+        }
         initView(details)
         btnPay.setOnClickListener {
-            details{
-                transactionId = System.currentTimeMillis()
-                status = true
-            }
             setResult(Constants.INTENT_PAY,intent.setDetails(details))
             finish()
         }
